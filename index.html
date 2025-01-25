@@ -11,10 +11,58 @@
 <body>
     <img src="images/my space station.png" alt="This is a space station I designed earlier that inspired me to major in mechanical engineering.">
     <nav>
-        <a href="index.html" class="current-page">Home</a>
+        <a href="index.html" class="current">Home</a>
         <a href="projects/index.html">Projects</a>
         <a href="contact/index.html">Contact</a>
         <a href="resume/index.html">Resume</a>
-    </nav>    
+    </nav>
+
+    <style>
+        :root {
+            --color-accent: oklch(65% 50% 0);
+        }
+
+        html {
+            accent-color: var(--color-accent);
+        }
+
+        body {
+            max-width: 100ch;
+            margin-inline: auto;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        nav {
+            display: flex;
+            margin-bottom: 5px;
+            border-bottom: 1px solid oklch(80% 3% 200);
+            padding: 0.5em;
+            position: fixed;
+            top: 0;
+            width: 50%;
+            z-index: 10000;
+        }
+        nav a {
+            flex: 1;
+            text-align: center;
+            color: inherit;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+
+        nav a.current {
+            font-weight: bold;
+            border-bottom: 0.4em solid oklch(80% 3% 200);
+            padding-bottom: 0.1em;
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid var(--color-accent);
+            background-color: oklch(from var(--color-accent) 95% 5% h);
+            padding-bottom: 0.1em;
+        }
+
+    </style>
 </body>
 </html>

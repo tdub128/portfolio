@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <h1>Resume</h1>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,96 +12,135 @@
         <a href="../index.html">Home</a>
         <a href="../projects/index.html">Projects</a>
         <a href="../contact/index.html">Contact</a>
-        <a href="resume/index.html" class="current-page">Resume</a>
+        <a href="../resume/index.html" class="current-page">Resume</a>
     </nav>
     
-    <main>
-        <h1>Resume</h1>
+    <style>
+        :root {
+            --color-accent: oklch(65% 50% 0);
+        }
 
-        <!-- Education Section -->
-        <section>
-            <header>
-                <h2>Education</h2>
-            </header>
-            <article>
-                <h3>University of California, San Diego</h3>
-                <p><time datetime="2021-09">Sept. 2021</time> - <time datetime="2025-06">June 2025</time></p>
-                <p>Bachelor of Science in Mechanical Engineering, Minor in Data Science</p>
-                <ul>
-                    <li>Relevant Coursework: Engineering Graphics and Design, Solid Mechanics, Thermodynamics, Machine Learning, etc.</li>
-                </ul>
-            </article>
-        </section>
+        html {
+            accent-color: var(--color-accent);
+        }
 
-        <!-- Research Experience Section -->
-        <section>
-            <header>
-                <h2>Research Experience</h2>
-            </header>
-            <article>
-                <h3>Student Researcher, Center of Wearable Devices</h3>
-                <p><time datetime="2023-06">June 2023</time> - Present</p>
-                <ul>
-                    <li>Co-authored a paper on continuous monitoring of glucose in sweat.</li>
-                    <li>Designed and manufactured a wearable device prototype.</li>
-                    <li>Developed computational models using Ansys Fluent and COMSOL.</li>
-                </ul>
-            </article>
+        body {
+            font: inherit;
+            line-height: 1.6;
+            margin: 0;
+            padding: 1rem;
+            max-width: 800px;
+            margin-inline: auto;
+            color: #333;
+        }
 
-            <article>
-                <h3>Student Researcher, Flight Dynamics of Boomerang Lab</h3>
-                <p><time datetime="2022-12">Dec. 2022</time> - Present</p>
-                <ul>
-                    <li>Studied aerodynamic expressions and developed a 6DOF MATLAB simulation.</li>
-                    <li>Designed elbow boomerangs with UWB positioning sensors for data collection.</li>
-                </ul>
-            </article>
-        </section>
+        h1, h2, h3 {
+            color: #007acc;
+            margin-bottom: 0.5rem;
+        }
 
-        <!-- Professional Development Section -->
-        <section>
-            <header>
-                <h2>Professional Development</h2>
-            </header>
-            <article>
-                <h3>Mechanical Engineering Intern, Persperion Diagnostics Inc.</h3>
-                <p><time datetime="2023-07">July 2023</time> - <time datetime="2024-09">Sept. 2024</time></p>
-                <ul>
-                    <li>Designed user-friendly features and improved sensor design quality.</li>
-                    <li>Optimized glucose monitor casing design to achieve 100% stable connection.</li>
-                </ul>
-            </article>
-        </section>
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            padding-top: 2rem;
+        }
 
-        <!-- Publications Section -->
-        <section>
-            <header>
-                <h2>Publications</h2>
-            </header>
-            <article>
-                <ul>
-                    <li>
-                        <a href="https://doi.org/10.1002/advs.202405518" target="_blank">
-                            A Passive Perspiration Inspired Wearable Platform for Continuous Glucose Monitoring
-                        </a>
-                    </li>
-                </ul>
-            </article>
-        </section>
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
 
-        <!-- Skills Section -->
-        <section>
-            <header>
-                <h2>Skills</h2>
-            </header>
-            <article>
-                <ul>
-                    <li>CAD Software: SolidWorks, Fusion360</li>
-                    <li>FEA Software: Ansys Fluent, COMSOL</li>
-                    <li>Programming: MATLAB, Python, Java</li>
-                </ul>
-            </article>
-        </section>
-    </main>
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 0 0 1rem 1.5rem;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+
+        nav {
+            display: flex;
+            margin-bottom: 5px;
+            border-bottom: 1px solid oklch(80% 3% 200);
+            padding: 0.5em;
+            position: fixed;
+            top: 0;
+            width: 50%;
+            z-index: 10000;
+        }
+        nav a {
+            flex: 1;
+            text-align: center;
+            color: inherit;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+
+        nav a.current {
+            font-weight: bold;
+            border-bottom: 0.4em solid oklch(80% 3% 200);
+            padding-bottom: 0.1em;
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid var(--color-accent);
+            background-color: oklch(from var(--color-accent) 95% 5% h);
+            padding-bottom: 0.1em;
+        }
+
+    </style>
+
+    <header>
+        <h2>Zongnan(Tony) Wang</h2>
+        <p>zow002@ucsd.edu | (858) 568-0342</p>
+    </header>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>University of California, San Diego</strong> — Bachelor of Science in Mechanical Engineering</p>
+        <p>Sept. 2021 - June 2025</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <h3>Student Researcher, Center of Wearable Devices</h3>
+        <p>June 2023 - Present</p>
+        <ul>
+            <li>Co-authored a paper investigating continuous glucose monitoring in sweat.</li>
+            <li>Designed and manufactured a wearable device prototype.</li>
+        </ul>
+
+        <h3>Mechanical Engineering Intern, Persperion Diagnostics</h3>
+        <p>July 2023 - Sept. 2024</p>
+        <ul>
+            <li>Designed user-friendly features for medical prototypes.</li>
+            <li>Optimized sensor casing design, increasing connection stability.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>CAD Software: SolidWorks, Fusion360</li>
+            <li>Programming: MATLAB, Python, Java</li>
+            <li>FEA Software: Ansys Fluent, COMSOL</li>
+        </ul>
+    </section>
 </body>
 </html>
