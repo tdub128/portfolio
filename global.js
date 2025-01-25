@@ -16,10 +16,10 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home');
 //       }
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
+    { url: '../', title: 'Home' },
+    { url: '../projects/', title: 'Projects' },
+    { url: '../contact/', title: 'Contact' },
+    { url: '../resume/', title: 'Resume' },
     { url: 'https://github.com/tdub128', title: 'GitHub' }
   ];
 
