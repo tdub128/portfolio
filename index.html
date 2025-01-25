@@ -6,25 +6,48 @@
     <title>Tony Wang: Personal site and portfolio</title>
     <h1>Tony Wang</h1>
     <p>Hi, my name is Tony and I'm a fourth year undergrauate mechanical engineer at UCSD. I'm passionate about medical device design and development. Welcom to my portfolio!</p>
-    <link rel="stylesheet" href="styles.css">
+    <script src="global.js" type="module"></script>
 </head>
 <body>
     <img src="images/my space station.png" alt="This is a space station I designed earlier that inspired me to major in mechanical engineering.">
-    <nav>
-        <a href="index.html" class="current">Home</a>
+    <!-- <nav>
+        <a href="index.html">Home</a>
         <a href="projects/index.html">Projects</a>
         <a href="contact/index.html">Contact</a>
         <a href="resume/index.html">Resume</a>
-    </nav>
+    </nav> -->
+    <!-- <form>
+        <label class="color-scheme">
+            Theme:
+            <select id="theme-select">
+                <option value="light dark">Automatic (Light or Dark)</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+    </form> -->
+
 
     <style>
+
         :root {
             --color-accent: oklch(65% 50% 0);
+            color-scheme: dark;
         }
 
         html {
             accent-color: var(--color-accent);
         }
+
+        .color-scheme {
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            font-size: 100%; 
+            font-family: inherit;
+        }
+
+
 
         body {
             max-width: 100ch;

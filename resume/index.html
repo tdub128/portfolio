@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="../global.js" type="module"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,12 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <a href="../index.html">Home</a>
         <a href="../projects/index.html">Projects</a>
         <a href="../contact/index.html">Contact</a>
-        <a href="../resume/index.html" class="current-page">Resume</a>
-    </nav>
+        <a href="../resume/index.html">Resume</a>
+    </nav> -->
     
     <style>
         :root {
@@ -31,7 +32,7 @@
             padding: 1rem;
             max-width: 800px;
             margin-inline: auto;
-            color: #333;
+            color: inherit;
         }
 
         h1, h2, h3 {
@@ -40,7 +41,7 @@
         }
 
         h1 {
-            color: #333;
+            color: inherit;
             font-size: 2.5rem;
             padding-top: 2rem;
         }
@@ -72,12 +73,19 @@
         p {
             margin: 0.5rem 0;
         }
+        .color-scheme {
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            font-size: 100%; 
+            font-family: inherit;
+        }
 
 
         nav {
             display: flex;
             margin-bottom: 5px;
-            border-bottom: 1px solid oklch(80% 3% 200);
+            border-bottom: 1px solid oklch(50% 10% 200);
             padding: 0.5em;
             position: fixed;
             top: 0;
@@ -94,7 +102,7 @@
 
         nav a.current {
             font-weight: bold;
-            border-bottom: 0.4em solid oklch(80% 3% 200);
+            border-bottom: 0.4em solid oklch(80% 3% 40);
             padding-bottom: 0.1em;
         }
 

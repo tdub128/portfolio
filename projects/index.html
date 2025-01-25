@@ -66,23 +66,33 @@
             <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
             <p>Atque impedit, modi facilis dolorem consectetur optio odio dicta culpa.</p>
         </article>
+        <script src="../global.js" type="module"></script>
     </div>
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <a href="../index.html">Home</a>
-        <a href="../projects/index.html" class="current-page">Projects</a>
+        <a href="../projects/index.html">Projects</a>
         <a href="../contact/index.html">Contact</a>
         <a href="../resume/index.html">Resume</a>
     </nav>
-    
+     -->
     <style>
         :root {
             --color-accent: oklch(65% 50% 0);
+            --color-border: oklch(50% 10% 200 / 40%);
+            color-scheme: dark;
         }
-
+        .color-scheme {
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            font-size: 100%; 
+            font-family: inherit;
+        }
         html {
             accent-color: var(--color-accent);
+            border-color: var(--color-border);
         }
 
         body {
@@ -122,7 +132,7 @@
         nav {
             display: flex;
             margin-bottom: 5px;
-            border-bottom: 1px solid oklch(80% 3% 200);
+            border-bottom: 1px solid var(--color-border);
             padding: 0.5em;
             position: fixed;
             top: 0;
