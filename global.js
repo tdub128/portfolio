@@ -70,3 +70,47 @@ for (let p of pages) {
     localStorage.colorScheme = event.target.value;
     console.log('color scheme changed to', event.target.value);
   });
+
+  export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        
+        // Check if the response is successful
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        
+        // Parse the response JSON data
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+    console.error('Invalid container element');
+    return;
+  }
+
+  containerElement.innerHTML = '';
+  for (let project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+        <${headingLevel}>${project.title}</${headingLevel}>
+        <img src="${project.image}" alt="${project.title}">
+        <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+// const projects = await fetchJSON('/projects/lib/projects.json')
+//Test it by calling the function with different headingLevel values.
+// renderProjects(projects, document.querySelector('.projects'), 'h1');
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/tdub128`);
+}
